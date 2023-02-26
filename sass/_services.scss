@@ -1,0 +1,112 @@
+.services {
+  // .services__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+    }
+  }
+  // .services__label
+  &__label {
+    margin-bottom: 19px;
+  }
+  // .services__content
+  &__content {
+    flex: 0 1 50%;
+    align-self: stretch;
+    @media screen and (min-width: 992px) {
+      align-self: center;
+      max-width: 500px;
+      flex: 0 0 50%;
+    }
+  }
+  // .services__title
+  &__title {
+  }
+  // .services__text
+  &__text {
+    margin-bottom: 15px;
+    @media screen and (min-width: 992px) {
+      justify-content: start;
+      column-gap: $gap;
+      row-gap: 15px;
+      margin-bottom: 33px;
+      max-width: 500px;
+    }
+  }
+  // .serice__actions
+  &__actions {
+  }
+  // .services__button
+  &__button {
+    @media screen and (max-width: 479.98px) {
+      width: 100%;
+    }
+  }
+  // .services__cards
+  &__cards {
+  }
+  // .services__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    @media screen and (min-width: 620px) {
+      flex-direction: row;
+      flex: 0 1 50%;
+    }
+  }
+  // .services__column
+  &__column {
+    @media screen and (min-width: 620px) {
+      &:first-child {
+        padding-top: 48px;
+      }
+    }
+  }
+  // .services__item
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: $gap;
+    }
+  }
+}
+.item-service {
+  padding: 20px;
+  background-color: $bgColorGreyTransp1;
+  border-radius: 30px;
+  @media screen and (min-width: 620px) {
+    padding: 55px 25px;
+  }
+  &::before {
+    margin-bottom: 16px;
+    content: "";
+    display: block;
+    width: 76px;
+    height: 76px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .services__column--1 > &:nth-child(1)::before {
+    background-image: url(../img/services/01.svg);
+  }
+  .services__column--1 > &:nth-child(2)::before {
+    background-image: url(../img/services/02.svg);
+  }
+  .services__column--2 > &:nth-child(1)::before {
+    background-image: url(../img/services/03.svg);
+  }
+  .services__column--2 > &:nth-child(2)::before {
+    background-image: url(../img/services/04.svg);
+  }
+  // .item-service__title
+  &__title {
+    margin-bottom: 10px;
+   }
+  // .item-service__text
+  &__text {
+    color: $colorGrey;
+  }
+}

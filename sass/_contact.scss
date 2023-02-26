@@ -1,0 +1,61 @@
+.contact {
+  // .contact__container
+  &__container {
+  }
+  //   .contact__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    row-gap: 25px;
+    padding: 30px 20px;
+    background-color: $bgColorGreyTransp1;
+    border-radius: 30px;
+    @media screen and (min-width: 480px) {
+      align-items: center;
+    }
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 52px 40px;
+    }
+  }
+  // .contact__content
+  &__column {
+    flex: 0 1 50%;
+    text-align: center;
+    max-width: 375px;
+  }
+  // .contact__title
+  &__title {
+    font-weight: $regular;
+    font-size: 24px;
+    line-height: 1.4;
+    color: $whiteColor;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 34px;
+    }
+  }
+  // .contact__text
+  &__text {
+    font-size: 16px;
+  }
+  // .contact__actions
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: $gap;
+    row-gap: 25px;
+    @media screen and (min-width: 480px) {
+      flex-direction: row;
+    }
+  }
+  // .contact__button
+  &__button {
+  }
+}

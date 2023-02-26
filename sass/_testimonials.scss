@@ -1,0 +1,115 @@
+.testimonials {
+  // .testimonials__container
+  &__container {
+  }
+  // .testimonials__content
+  &__content {
+  }
+  // .testimonials__label
+  &__label {
+    // margin-bottom: 25px;
+  }
+  // .testimonials__title
+  &__title {
+  }
+  //   .testimonials__body
+  &__body {
+    margin-bottom: 32px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 64px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+  // .testimonials__text
+  &__text {
+    margin-bottom: 15px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+      max-width: 740px;
+    }
+  }
+  // .testimonials__actions
+  &__actions {
+    align-self: flex-end;
+  }
+  // .testimonials__button
+  &__button {
+    @media screen and (max-width: 479.98px) {
+      width: 100%;
+    }
+  }
+  // .testimonials__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    @media screen and (max-width: 1100px) {
+      grid-template-columns: auto;
+      gap: $gap;
+    }
+  }
+  // .testimonials__item
+  &__item {
+  }
+}
+.item-testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+  padding: 30px 15px;
+  background-color: $bgColorGreyTransp1;
+  border-radius: 30px;
+  @media screen and (min-width: 768px) {
+      padding: 64px 40px;
+    }
+
+  // .item-testimonial__user
+  &__user {
+  }
+  // .item-testimonial__quote
+  &__quote {
+    font-weight: $regular;
+    font-size: 32px;
+    line-height: 1.4;
+    color: $whiteColor;
+  }
+  // .item-testimonial__text
+  &__text {
+    flex: 1 1 auto;
+
+    line-height: 1.5;
+  }
+  // .item-testimonial__rating
+  &__rating {
+  }
+}
+.user-testimonial {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  // .user-testimonial__avatar
+  &__avatar {
+    flex: 0 0 68px;
+    & img {
+      max-width: 100%;
+    }
+  }
+  // .user-testimonial__body
+  &__body {
+  }
+  // .user-testimonial__title
+  &__title {
+    line-height: 1.5;
+    color: $whiteColor;
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+  // .user-testimonial__company
+  &__company {
+    font-size: 14px;
+  }
+}
